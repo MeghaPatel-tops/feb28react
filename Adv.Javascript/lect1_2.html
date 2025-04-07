@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction Example</title>
+    <script>
+        function alertExample(){
+            alert("Buttton Click");
+        }
+        function confirmExample(){
+           const value = confirm("You want to delete item");
+           if(value){
+                alert("item deleted");
+           }
+           else{
+            alert("item not deleted");
+           }
+        }
+        function promptExample(){
+            let num = prompt("Enter num","123");
+            alert(num);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="alertExample()">
+        Alert Example
+    </button>
+    <button onclick="confirmExample()">
+        Confirm Example
+    </button>
+    <button onclick="promptExample()">
+        Prompt Example
+    </button>
+</body>
+</html>

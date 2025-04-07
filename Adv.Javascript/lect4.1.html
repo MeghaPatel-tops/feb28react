@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+   
+    <script  type="module" >  
+     //'Access-Control-Allow-Origin: *'
+       import {pi} from "./maths.js"
+       function Outer(number1){
+            return function inner(number2){
+                return number1*number2;
+
+            }
+        }
+        const first = Outer(5);
+        console.log(typeof(first));
+        console.log(first(10));
+
+        console.log(pi);
+
+        function testData(){
+            var name="megha";
+            console.log("name="+name);
+            
+        }
+
+        testData();
+
+        console.log(name);  
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

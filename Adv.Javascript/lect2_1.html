@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=""></script>
+    <script>
+        console.log("ehetre");
+        function checkAge(){
+            var num = prompt("Enter Num");
+            if(num%2 == 0){
+                alert("Even")
+            }
+            else{
+                alert("Odd")
+            }
+        }
+        function whileExample(){
+            str="";
+            var num = prompt("Enter Num");
+            i=1;
+            while(i<=10){
+                mul=num*i;
+                str+=`${num}*${i}=${mul}<br>`;
+                i++;
+            }
+            document.getElementById('tableshow').innerHTML=str;
+            
+        }
+        function ForExample(){
+           
+            var fact=1;
+            var num = prompt("Enter Num");
+            for(i=1;i<=num;i++){
+                fact =fact * i;
+                console.log(fact);
+                
+            }
+            str=`<h1>Factorial of ${num}=${fact}</h1>`;
+            document.getElementById('tableshow1').innerHTML=str;
+            
+        }
+        function breakExample(){
+            while(true){
+                num = prompt("Enter num");
+                if(num==3){
+                    break;
+                }
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <button onclick="checkAge()">Check age</button>
+    <button onclick="whileExample()">
+        While Loop Example
+    </button>
+    <p id="tableshow">
+        <button onclick="ForExample()">
+            For Loop Example
+        </button>
+        <p id="tableshow1">
+
+    </p>
+    <button onclick="breakExample()">Break Example</button>
+</body>
+</html>

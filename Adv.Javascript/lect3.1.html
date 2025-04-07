@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Example</title>
+    <script>
+        let x=30;
+        //function as declaration
+        function display(){
+            let a=10;
+            alert("hello");
+            console.log(a);
+            console.log(x);
+            add(x,a);
+            areaOfCircle(3);
+            let sq= square(x);
+            console.log(`square of ${x} = ${sq}`);
+            
+            
+        }
+        function add(x,y){
+            console.log(x+y);
+        }
+        function areaOfCircle(r,pi = 3.14){
+            console.log(pi);
+            
+             let area= pi*r*r;
+             console.log("area of circle"+area);
+             
+        }
+        function square(num){
+            return num*num;
+        }
+        //function as expresiion
+    let sum = function(a,b){
+        let c= a+b;
+        console.log("addition="+c);
+        
+    }
+    sum(12,34)
+    //callback function
+    function checkNumber(Even,Odd){
+        num = prompt("Enter num");
+        if(num%2==0){
+            Even(num);
+        }
+        else{
+            Odd(num);
+        }
+    }
+    function Even(){
+        console.log(num+"is  Even");
+        
+    }
+    function Odd(){
+        console.log(num+" is odd");
+        
+    }
+    //arrow function
+    const checkAge = ()=>{
+        age = prompt("Enter Age");
+        if(age > 18){
+            alert("eligible");
+        }
+        else{
+            alert("not eligible");
+        }
+    }
+
+    
+    </script>
+</head>
+<body>
+    <button onclick="display()">Simple Function</button>
+    <button onclick="checkNumber(Even,Odd)">Callback function</button>
+    <button onclick="checkAge()">Error function</button>
+</body>
+</html>
