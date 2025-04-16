@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let student = new Object();
+        student.name="Malay";
+        student.email="malay@gmail.com";
+        student.age=29;
+
+
+       Object.seal(student);
+       student.contcat="98908098";
+       student.email="m@gmail.com"
+       console.log(student);
+
+
+       let user = {
+             name:"Roni",
+             age:"22",
+
+             printUser(){
+                console.log("username="+this.name);
+                console.log("age="+this.age);
+                
+             }
+
+       }
+
+       user.printUser();
+
+       let fruit={name:"apple" ,price:20};
+       let fruit1={name:"kiwi" ,price:100};
+
+      function printFruit(){
+          console.log("fruitname:"+this.name);
+          console.log("fruitprice:"+this.price);
+       }
+
+       fruit.f=printFruit;
+       fruit1.f=printFruit;
+
+       fruit.f();
+       fruit1.f();
+       
+//====================================================
+        // Object.freeze(student)
+
+        // student.conatct="80989898";
+        // student.email="m@gmail.com"
+        // console.log(student)
+//=======================================================        
+    //     console.log(Object.keys(student))
+    //     console.log(Object.values(student))
+    //     console.log(Object.entries(student))
+
+    //     console.log(typeof(Object.keys(student)));
+        
+    //    let keys = Object.keys(student);
+    //    console.log(typeof(keys));
+       
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

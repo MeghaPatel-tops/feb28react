@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let now = new Date();
+
+        alert(now);
+
+        let student = new Object();
+        student.name="Malay";
+        student.email="malay@gmail.com";
+        student.age=29;
+        
+        console.log(student);
+        delete student.age;
+        console.log(student);
+
+        student.subject="Java";
+        console.log(student);
+
+        student['contact']=90999900;
+
+        console.log(student);
+       
+        
+        // =====================================
+        
+        function makePoduct(pid,pname,price){
+            return {
+                pid:pid,
+                pname:pname,
+                price:price
+            }
+        }
+
+        let p1 = makePoduct(101,"laptop",999);
+        let p2= makePoduct(102,"keybord",1200);
+        console.log(p1);
+        console.log(p2);
+        printObject(p1);
+
+        function printObject(p1){
+            str="";
+            for(index in p1){
+                str+=`<h1>${index}= ${p1[index]}</h1>`;
+            }
+            document.write(str)
+            
+        }
+
+        if( "price"   in p1){
+            console.log("with condition"+p1);
+            
+        }
+        
+        
+
+        let product = new Object({"pid":101,"pname":"laptop"});
+
+        console.log(product);
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

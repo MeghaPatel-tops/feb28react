@@ -1,0 +1,36 @@
+let str="tops"
+VM59:1 Uncaught SyntaxError: Identifier 'str' has already been declared
+let str1="tops"
+undefined
+console.l
+undefined
+console.log(str[0])
+VM134:1 T
+undefined
+console.log(str[str.length-1])
+VM159:1 s
+undefined
+console.log(str.at(0))
+VM203:1 T
+undefined
+console.log(str.at(-1))
+VM214:1 s
+undefined
+str[0] = 'q'
+'q'
+str1[0] = 'q'
+'q'
+console.log(str1)
+VM344:1 tops
+undefined
+str=str.toLocaleLowerCase();
+'tops'
+str=str.toLocaleu();
+VM430:1 Uncaught TypeError: str.toLocaleu is not a function
+    at <anonymous>:1:9
+(anonymous) @ VM430:1
+str=str.toLocaleUpperCase();
+'TOPS'
+console.log(str)
+VM508:1 TOPS
+undefined
