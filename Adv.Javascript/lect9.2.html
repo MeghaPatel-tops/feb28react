@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Rest parameters and spread syntax
+        function add(a,b){
+            return a+b;
+        }
+        alert(add(1,2,3,4));
+
+        function sum(...args){
+            let sum=0;
+            for(let agr of args){
+                sum+=agr
+            }
+            return sum;
+        }
+        alert(sum(1,2,3,4,5));
+    </script>
+</head>
+<body>
+    <code>
+        Rest parameters and spread syntax
+        <br>
+        function add(a,b){
+            <br>
+            return a+b;
+            <br>
+        }
+        <br>
+        alert(add(1,2,3,4));
+    </code>
+</body>
+</html>

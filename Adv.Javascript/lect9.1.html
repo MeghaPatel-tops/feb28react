@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         let fruit= ["apple","kiwi","mango"];
+        let userObj={
+            username:"Megha",
+            email:"m@gmail.com",
+            contact:90999900,
+            address:"101 main streeet suart"
+        }
+
+        console.log(userObj);
+        //alert(userObj);
+
+        let userStr = JSON.stringify(userObj);
+
+        console.log(typeof(userStr));
+        
+        let parseObj = JSON.parse(userStr);
+
+        console.log(typeof(parseObj));
+        
+        
+
+        document.write(userStr);
+
+        let fruitStr = JSON.stringify(fruit);
+        document.write(`<p>${fruitStr}</p>`);
+
+       
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
