@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getProduts(url){
+            let productPromise = new Promise((resolve,err)=>{
+                 return fetch(url)
+                 .then(response =>{
+                      if(!response.ok){
+                         err(`Data not found`);
+                      }
+                      return response.json();
+                 }).then(data=>{
+                    resolve(data)
+                 }).catch(err=>{
+                    console.log(err);
+                 })
+                
+            })
+            return productPromise;
+        }
+
+    const url="https://fakestoreapi.com/products/";
+    getProduts(url).then(data=>{
+        console.log(data)
+    }).catch(err=>{
+        console.log(err);
+        
+    })
+
+    console.log("data not prepared");
+    
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
