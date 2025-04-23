@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+   
+</head>
+<body>
+    <div class="container">
+        <h2>Striped Rows</h2>
+        <p>The .table-striped class adds zebra-stripes to a table:</p>            
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ProductName</th>
+              <th>Price</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody id="cartdata">
+          
+          </tbody>
+        </table>
+      </div>
+      <script>
+        function getCartData(){
+             let uname = prompt("Enter Username");
+ 
+             let sessiondata = sessionStorage.getItem("uname");
+             (!sessiondata)?sessionStorage.setItem("uname",uname):"";
+             console.log(sessiondata);
+
+             if(sessiondata){
+                console.log("here");
+                
+                 let cartStorage = localStorage.getItem(sessiondata);
+                 cartStorage= JSON.parse(cartStorage);
+                    console.log(cartStorage);
+                    
+                 str="";
+                 for(index of cartStorage){
+                     pname = index.title.substring(0, 10);
+                     str += ` <tr>
+                 <td>${pname}</td>
+                 <td>${index.price}</td>
+                 <td><img src="${index.image}" alt="" height="100px" width="100px">  </td>
+             </tr>`
+                 }
+                 console.log(str);
+                 document.getElementById("cartdata").innerHTML= str;
+     
+         }
+        }
+       
+       getCartData();
+     </script>
+</body>
+</html>
