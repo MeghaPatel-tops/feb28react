@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interaction Example</title>
-    <script>
+    
+    <script type="module">
+        
+        import {printHello} from './export_file.js';
+
+        printHello();
         function alertExample(){
             alert("Buttton Click");
         }
